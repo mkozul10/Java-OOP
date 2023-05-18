@@ -1,0 +1,34 @@
+Kreirajte apstraktnu klasu Dobit koja ima varijablu:
+static String [] statusi = new String[]
+{"crveno", "narančasto", "žuto", "plavo", "zeleno"};
+Kreirajte klase koje proširuju apstraktnu klasu Dobit i 
+opisuju pojedine klijente (primjerice:Tanki, Srednji, 
+Debeli). Klasa ima atribute: status_dobiti (string) koji 
+može poprimiti vrijednosti iz niza "statusi" i atribut 
+Ime (string). Klasa ima odgovarajući konstruktor s dva 
+parametra koji postavlja vrijednosti atributa i 
+implementira interface:
+	Interface Trziste ()
+	{
+		void dekrement(i);
+	void inkrement();
+	}
+Metode mijenjaju trenutni status_dobiti klijenta u 
+odgovarajući status označen elementom niza "statusi",
+pri čemu "crveno" označava najveći stupanj dekrementa 
+dobiti. Metoda dekrement mijenja status_dobiti u 
+status elementa u nizu s nižim indeksom, a metoda 
+inkrement() mijenja status_dobiti u status elementa u 
+nizu s višim indeksom (primjerice, ako je status_dobiti 
+= "narančasto", metoda dekrement() mijenja ga u 
+"crveno", a metoda inkrement mijenja ga u "žuto"). U 
+klasi treba preraditi metodu toString() tako da 
+ispisuje njegov status_dobiti i ime klijenta.
+Kreirajte testnu klasu u kojoj je inicijaliziran niz od 
+20 klijenata slučajnim odabirom (pretpostavimo
+da imamo 3 klase: Tanki, Srednji i Debeli – dovoljno je 
+kreirati samo jednu, a u programu koristiti 
+ostale kao da su kreirane). Na svakog klijenta 
+primijenite nasumičnim odabirom jednu od metoda iz 
+interfacea i zatim neka program ispišite status_dobiti 
+prije i nakon djelovanja metoda.
